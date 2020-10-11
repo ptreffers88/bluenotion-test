@@ -1,0 +1,15 @@
+@import "../../assets/styles/variables.scss";
+
+.circle {
+  border-radius: 50%;
+  z-index: -1;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    position: absolute;
+    width: 150%;
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../assets/styles/variables.scss";
+
+.loginFormContainer {
+  background-color: $white;
+  margin-bottom: 20px;
+  @media (min-width: $container-small-max-width) {
+    width: 766px;
+    height: 766px;
+    max-width: 80vh;
+    max-height: 80vh;
+    border-radius: 50%;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: $container-small-max-width) {
+    padding: 40px 20px;
+  }
+}
+
+.loginForm {
+  max-width: 52%;
+  @media (max-width: $container-small-max-width) {
+    max-width: 100%;
+  }
+}
+
+.pageTitle {
+  margin-bottom: 27px;
+  @media (max-width: $container-small-max-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.description {
+  margin-bottom: 57px;
+  @media (max-width: $container-small-max-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.email,
+.password {
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: $font-size-smaller;
+  @media (min-width: $container-small-max-width) {
+    margin-bottom: 13px;
+  }
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size-smaller;
+  button {
+    background-color: $color-primary;
+    border-radius: 50%;
+    border: none;
+    width: 70px;
+    height: 70px;
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+}
+
+.error {
+  color: #ff0000;
+  font-size: $font-size-smaller;
+  margin-top: 5px;
+}

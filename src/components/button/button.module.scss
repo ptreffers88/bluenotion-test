@@ -1,0 +1,51 @@
+@import "../../assets/styles/variables.scss";
+
+.primary,
+.secondary,
+.tertiary,
+.quaternary {
+  transition: all ease 0.5s;
+}
+
+.tertiary,
+.quaternary {
+  &:hover {
+    color: darken($color-primary, 10%);
+  }
+}
+
+.primary {
+  text-decoration: none;
+  display: block;
+  color: $white;
+  background-color: $color-primary;
+  padding: 0 12px;
+  border-radius: 12px;
+  height: 60px;
+  line-height: 58px;
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+}
+
+.secondary {
+  color: $color-body;
+  background-color: $color-secondary;
+  &:hover {
+    background-color: darken($color-secondary, 10%);
+  }
+}
+
+.tertiary {
+  background-color: transparent;
+  color: $color-primary;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.quaternary {
+  background-color: transparent;
+  color: $color-body;
+  text-decoration: none;
+}

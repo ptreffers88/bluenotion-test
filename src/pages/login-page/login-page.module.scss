@@ -1,0 +1,75 @@
+@import "../../assets/styles/variables.scss";
+
+body {
+  background-color: $color-secondary;
+  @media (min-width: $container-small-max-width) {
+    overflow: hidden;
+  }
+}
+
+.loginPage {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media (max-width: $container-small-max-width) {
+    padding: 30px 0;
+  }
+}
+
+.circle {
+  &Green,
+  &Blue,
+  &Orange {
+    position: absolute;
+    transition: all ease 1s;
+    opacity: 0;
+    @media (max-width: $container-small-max-width) {
+      display: none;
+    }
+  }
+  &Green {
+    top: 10%;
+    left: 10%;
+  }
+  &Blue {
+    top: 80%;
+    left: 7%;
+  }
+  &Orange {
+    top: 10%;
+    left: 85%;
+  }
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.register,
+.logo {
+  @media (min-width: $container-small-max-width) {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+}
+
+.logo {
+  right: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @media (max-width: $container-small-max-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.register {
+  @media (max-width: $container-small-max-width) {
+    text-align: center;
+  }
+}

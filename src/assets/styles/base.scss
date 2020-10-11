@@ -1,0 +1,19 @@
+body {
+  font-family: $font-family-global;
+  font-size: $font-size-global;
+  color: $color-body;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: $font-size-pageTitle;
+  line-height: 47px;
+}
+
+p {
+  font-size: $font-size-smaller;
+  line-height: 27px;
+}
