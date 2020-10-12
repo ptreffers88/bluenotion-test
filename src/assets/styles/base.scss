@@ -1,6 +1,7 @@
 body {
   font-family: $font-family-global;
   font-size: $font-size-global;
+  line-height: 27px;
   color: $color-body;
 }
 
@@ -8,12 +9,12 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: $font-size-pageTitle;
+h1,
+h2 {
+  font-family: $font-family-pageTitle;
   line-height: 47px;
 }
 
-p {
-  font-size: $font-size-smaller;
-  line-height: 27px;
+h1 {
+  font-size: $font-size-pageTitle;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Formik, Form, Field, FormikErrors, FormikValues, ErrorMessage } from "formik";
 import { ReactSVG } from "react-svg";
 
@@ -8,22 +8,6 @@ import arrowImage from "../../assets/img/arrow.svg";
 import styles from "./login-form.module.scss";
 
 const LoginForm = (): JSX.Element => {
-  const [screenSize, setScreenSize] = useState({ height: window.innerHeight, width: window.innerWidth });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenSize({
-        height: window.innerHeight,
-        width: window.innerWidth,
-      });
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return (): void => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const handleForgotPassword = () => {
     alert("Wachtwoord vergeten");
@@ -73,7 +57,7 @@ const LoginForm = (): JSX.Element => {
               </div>
               <label className={styles.checkbox}>
                 <Field type="checkbox" name="remeber device" />
-                {screenSize.width > 768 ? "Onthoud deze browser" : "Onthoud deze mobiel"}
+                Onthoud deze browser
               </label>
               <div className={styles.bottomBar}>
                 <Button link="" title="Wachtwoord vergeten?" variant="quaternary" onClick={handleForgotPassword} />

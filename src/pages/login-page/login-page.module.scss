@@ -2,7 +2,7 @@
 
 body {
   background-color: $color-secondary;
-  @media (min-width: $container-small-max-width) {
+  @media (min-width: $container-medium-max-width) {
     overflow: hidden;
   }
 }
@@ -15,7 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  @media (max-width: $container-small-max-width) {
+  @media (max-width: $container-medium-max-width) {
     padding: 30px 0;
   }
 }
@@ -26,8 +26,7 @@ body {
   &Orange {
     position: absolute;
     transition: all ease 1s;
-    opacity: 0;
-    @media (max-width: $container-small-max-width) {
+    @media (max-width: $container-medium-max-width) {
       display: none;
     }
   }
@@ -43,15 +42,26 @@ body {
     top: 10%;
     left: 85%;
   }
-}
-
-.fadeIn {
-  opacity: 1;
+  &White {
+    @media (max-width: $container-medium-max-width) {
+      width: 65vmin !important;
+      height: 65vmin !important;
+      position: relative;
+      margin-bottom: 80px;
+    }
+    h2 {
+      line-height: 91px;
+      @media (max-width: $container-medium-max-width) {
+        font-size: calc(65vmin / 5) !important;
+        line-height: calc(65vmin / 5) !important;
+      }
+    }
+  }
 }
 
 .register,
 .logo {
-  @media (min-width: $container-small-max-width) {
+  @media (min-width: $container-medium-max-width) {
     position: absolute;
     bottom: 5%;
     right: 5%;
@@ -63,13 +73,13 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  @media (max-width: $container-small-max-width) {
-    margin-bottom: 20px;
+  @media (max-width: $container-medium-max-width) {
+    margin-bottom: 5px;
   }
 }
 
 .register {
-  @media (max-width: $container-small-max-width) {
+  @media (max-width: $container-medium-max-width) {
     text-align: center;
   }
 }

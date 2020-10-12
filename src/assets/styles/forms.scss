@@ -10,7 +10,7 @@ input[type="password"] {
   border: 1px solid $color-secondary;
   background-color: $color-secondary;
   transition: all ease 0.5s;
-  @media (max-width: $container-small-max-width) {
+  @media (max-width: $container-medium-max-width) {
     height: 60px;
   }
   &::placeholder {

@@ -3,40 +3,39 @@
 .loginFormContainer {
   background-color: $white;
   margin-bottom: 20px;
-  @media (min-width: $container-small-max-width) {
+  @media (min-width: $container-medium-max-width) {
     width: 766px;
     height: 766px;
-    max-width: 80vh;
-    max-height: 80vh;
+    max-width: 80vmin;
+    max-height: 80vmin;
     border-radius: 50%;
     margin-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  @media (max-width: $container-small-max-width) {
+  @media (max-width: $container-medium-max-width) {
     padding: 40px 20px;
   }
 }
 
 .loginForm {
   max-width: 52%;
-  @media (max-width: $container-small-max-width) {
+  @media (max-width: $container-medium-max-width) {
     max-width: 100%;
   }
 }
 
 .pageTitle {
   margin-bottom: 27px;
-  @media (max-width: $container-small-max-width) {
+  @media (max-width: $container-medium-max-width) {
     margin-bottom: 10px;
   }
 }
 
 .description {
   margin-bottom: 57px;
-  @media (max-width: $container-small-max-width) {
+  @media (max-width: $container-medium-max-width) {
     margin-bottom: 20px;
   }
 }
@@ -46,11 +45,16 @@
   margin-bottom: 20px;
 }
 
+.checkbox,
+.bottomBar {
+  font-family: $font-family-semibold;
+  font-size: $font-size-smaller;
+}
+
 .checkbox {
   display: flex;
   align-items: center;
-  font-size: $font-size-smaller;
-  @media (min-width: $container-small-max-width) {
+  @media (min-width: $container-medium-max-width) {
     margin-bottom: 13px;
   }
 }
@@ -59,7 +63,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: $font-size-smaller;
   button {
     background-color: $color-primary;
     border-radius: 50%;

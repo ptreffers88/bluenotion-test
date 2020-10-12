@@ -6,12 +6,17 @@ $color-secondary: #e6f3f5;
 $color-body: $black;
 
 // FONTS
-$font-family-global: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+$font-family-bold: "gilroybold";
+$font-family-medium: "gilroymedium";
+$font-family-semibold: "gilroysemibold";
+$font-family-regular: "gilroyregular";
+
+$font-family-global: $font-family-medium, Helvetica, Arial, sans-serif;
+$font-family-pageTitle: $font-family-bold, Helvetica, Arial, sans-serif;
 
 $font-size-global: 17px;
 $font-size-smaller: 14px;
 $font-size-pageTitle: 43px;
 
 // CONTAINER
-$container-xsmall-max-width: 320px;
-$container-small-max-width: 640px;
+$container-medium-max-width: 860px;
