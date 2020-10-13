@@ -1,20 +1,24 @@
 import React from "react";
 import { Formik, Form, Field, FormikErrors, FormikValues, ErrorMessage } from "formik";
 import { ReactSVG } from "react-svg";
+import { useSpring, animated } from "react-spring";
 
-import { Button } from "../button/button";
 import arrowImage from "../../assets/img/arrow.svg";
+import { Button } from "../button/button";
 
 import styles from "./login-form.module.scss";
 
 const LoginForm = (): JSX.Element => {
-
-  const handleForgotPassword = () => {
+  const handleForgotPassword = (): void => {
     alert("Wachtwoord vergeten");
   };
 
+  const formProps = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 700 });
+  const circleProps = useSpring({ transform: "scale(1)", from: { transform: "scale(0)" }, delay: 700 });
+
   return (
-    <div className={styles.loginFormContainer}>
+    <animated.div style={formProps} className={styles.loginFormContainer}>
+      <animated.span style={circleProps} className={styles.circleBg} />
       <div className={styles.loginForm}>
         <h1 className={styles.pageTitle}>
           welkom bij
@@ -69,7 +73,7 @@ const LoginForm = (): JSX.Element => {
           )}
         </Formik>
       </div>
-    </div>
+    </animated.div>
   );
 };
 

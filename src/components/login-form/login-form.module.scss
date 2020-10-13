@@ -1,28 +1,42 @@
 @import "../../assets/styles/variables.scss";
 
-.loginFormContainer {
-  background-color: $white;
-  margin-bottom: 20px;
-  @media (min-width: $container-medium-max-width) {
-    width: 766px;
-    height: 766px;
-    max-width: 80vmin;
-    max-height: 80vmin;
-    border-radius: 50%;
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.loginForm {
+  max-width: 52%;
+  position: absolute;
   @media (max-width: $container-medium-max-width) {
+    position: relative;
+    max-width: 100%;
     padding: 40px 20px;
   }
 }
 
-.loginForm {
-  max-width: 52%;
+.loginFormContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
   @media (max-width: $container-medium-max-width) {
-    max-width: 100%;
+    background-color: $white;
+    width: 100%;
+  }
+  @media (min-width: $container-medium-max-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.circleBg {
+  @media (min-width: $container-medium-max-width) {
+    background-color: $white;
+    width: 766px;
+    height: 766px;
+    max-width: 80vmin;
+    max-height: 80vmin;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  @media (max-width: $container-medium-max-width) {
+    display: none;
   }
 }
 

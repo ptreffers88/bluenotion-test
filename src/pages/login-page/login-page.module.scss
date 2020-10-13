@@ -2,52 +2,68 @@
 
 body {
   background-color: $color-secondary;
-  @media (min-width: $container-medium-max-width) {
-    overflow: hidden;
-  }
 }
 
 .loginPage {
-  min-height: 100vh;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media (min-width: $container-medium-max-width) {
+    min-height: 100vh;
+  }
   @media (max-width: $container-medium-max-width) {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 }
 
+.circleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .circle {
-  &Green,
-  &Blue,
-  &Orange {
-    position: absolute;
-    transition: all ease 1s;
-    @media (max-width: $container-medium-max-width) {
-      display: none;
-    }
-  }
   &Green {
     top: 10%;
     left: 10%;
+    @media (max-width: $container-medium-max-width) {
+      top: -15%;
+      left: -15%;
+    }
   }
   &Blue {
     top: 80%;
     left: 7%;
+    @media (max-width: $container-medium-max-width) {
+      top: 50%;
+      left: -25%;
+      width: 45vmin !important;
+      height: 45vmin !important;
+    }
   }
   &Orange {
     top: 10%;
     left: 85%;
+    @media (max-width: $container-medium-max-width) {
+      top: -5%;
+      left: 85%;
+      width: 50vmin !important;
+      height: 50vmin !important;
+    }
   }
   &White {
     @media (max-width: $container-medium-max-width) {
       width: 65vmin !important;
       height: 65vmin !important;
-      position: relative;
-      margin-bottom: 80px;
+      margin-bottom: 0;
+      top: 25%;
     }
     h2 {
       line-height: 91px;

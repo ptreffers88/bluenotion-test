@@ -3,9 +3,10 @@ import React from "react";
 import { Button } from "../button/button";
 
 const Register = (): JSX.Element => {
-  const handleRegister = () => {
+  const handleRegister = (): void => {
     alert("Registeer eenvoudig en snel!");
   };
+
   return (
     <div>
       <p>Nog geen account?</p>
